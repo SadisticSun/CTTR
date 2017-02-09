@@ -1,0 +1,364 @@
+/*
+    Living Styleguide for CSS To The Rescue
+
+    By Tristan Jacobs - 2017
+ */
+
+/* Created with a Mobile First approach */
+
+/* Some global styles */
+
+body {
+  font-family: 'Gotham Rounded', sans-serif;
+  color: #333;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  line-height: 20pt;
+  font-size: 11pt;
+}
+
+
+/* Navigation Mobile */
+
+.nav-title {
+  display: none;
+}
+.main-nav {
+  padding: 1em;
+  background-color: #2980b9;
+  color: white;
+}
+.main-nav a {
+  text-decoration: none;
+  color: white;
+}
+.main-nav a:active,
+.main-nav a:hover {
+  font-weight: 500;
+}
+.main-nav ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0em;
+  text-indent: -1em;
+  line-height: 25pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-nav ul li {
+  margin: 0 1rem;
+}
+.main-nav .dropdown-list {}
+
+/* Progress Bar Mobile */
+.order-nav {
+  background: #3498db;
+  color: white;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+progress {
+  width: 100%;
+  border-radius: 2px;
+}
+progress::-webkit-progress-bar {
+  background-color: #2980b9;
+}
+progress::-webkit-progress-value {
+  background-color: white;
+}
+
+.order-nav ol {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.order-nav ol span {
+  color: lightgrey;
+}
+.order-nav ol a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Articles */
+
+article {
+  display: flex;
+  flex-direction:column;
+  width: 100%;
+  background: white;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  margin: 1em 0;
+}
+
+.article-boilerplate {
+  padding: 1em;
+}
+.article-img {
+  height: 100%;
+  width: 100%;
+}
+
+.article-w-img figure {
+  padding:0;
+  margin:0;
+}
+
+.article-w-img figure img {
+  max-width: 100%;
+}
+
+.article-w-img figcaption {
+    padding:1em;
+}
+
+.article-w-img figcaption footer {
+    text-align: center;
+    font-size: 70%;
+}
+
+.inner-block {
+  padding: 0 1em;
+}
+
+.hasShadow {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+}
+
+
+/* Login Form */
+
+#login-form {
+  background: #3498db;
+  color: white;
+  padding: 1rem;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#login-form label,
+#login-form input {
+  margin: 0.4em 0;
+}
+#login-form input {
+  padding: 1em;
+}
+#login-form a {
+  margin-top: 5px;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none;
+}
+#login-form span {
+  margin: 1em 0;
+}
+#login-form [type="submit"] {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 1.2em;
+  box-shadow: 1px 1px 1px #27ae60;
+  font-size: 10pt;
+  text-transform: uppercase;
+}
+#login-form [type="submit"]:hover {
+  background-color: #27ae60;
+  box-shadow: 0px 0px 0px;
+  cursor: pointer;
+}
+
+/* Rating */
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background: white;
+}
+fieldset legend {
+  display: none;
+}
+fieldset [type="radio"] {
+  display: none;
+}
+fieldset label {
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+fieldset svg {
+  display: block;
+  width: 35px;
+}
+
+/* Chat */
+
+.chat {
+  background: #ECF0F1;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border: 5px solid white;
+
+}
+.chat form {
+  display: flex;
+  flex-direction: column;
+}
+.chat form textarea {
+  border: none;
+  resize: none;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+}
+.chat form [type="submit"] {
+  margin: 0 auto;
+  width: 100%;
+  height: 4em;
+  border: none;
+  background: skyblue;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2pt;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.chat form [type="submit"]:hover {
+  background-color: deepskyblue;
+  transition: 0.3s;
+}
+.chat ol {
+  list-style: none;
+  padding: 0;
+}
+.chat ol li:nth-child(even) .message {
+  background-color: skyblue;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  margin-bottom: 0.7em;
+}
+.chat ol li:nth-child(even) .message {
+  color: white;
+}
+.chat ol li:nth-child(odd) .message {
+  background-color: white;
+  color: #333;
+  text-align: right;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  margin-bottom: 0.7em;
+}
+.chat ol li footer p {
+  color: #AAAAAA;
+  font-size: 60%;
+  line-height: 5pt;
+}
+.chat ol li:nth-child(odd) footer {
+  text-align: right;
+}
+.chat ol li footer p[data-status="DELIVERED"] {
+  color: #7FDBFF;
+  font-style: italic;
+}
+.chat ol li footer p[data-status="READ"] {
+  font-style: italic;
+  color: #01FF70;
+}
+
+.chat form label {
+  font-size: 75%;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+
+
+@media only screen and (min-width: 700px) {
+
+    .main-nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .main-nav ul .dropdown-list {
+        display: none;
+    }
+
+    #main-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .row-item {
+        min-width: 47%;
+        max-width: 47%;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .main-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .left-cont-col header {
+        padding:1em;
+        background: #2980b9;
+        border-bottom: 1px solid white;
+    }
+
+    .left-cont-col header h1 {
+        margin: 0;
+        color: white;
+        font-size:130%;
+    }
+
+    .main-nav {
+        height: 100%;
+        width: 15vw;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .main-nav ul .dropdown-list {
+        display: block;
+    }
+
+    .main-nav ul .dropdown-list li {
+
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1450px) {
+
+   /* row-items even uitlijnen op een grid van 3 */
+
+}
