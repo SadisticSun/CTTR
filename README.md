@@ -1,3 +1,6 @@
-# Components
+# CSS To The Rescue - Minor Webdevelopment
 
-Rating example makes use of Emoji from: http://emojione.com
+## Living Styleguide
+
+Link naar live versie:
+Https://iamt.nl/minor/cttr
