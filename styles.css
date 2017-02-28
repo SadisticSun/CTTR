@@ -5,29 +5,28 @@
 /* ====================================== */
 
 
-
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto+Slab');
 
 /* Some global styles */
 body {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Oswald', sans-serif;
+    color: white;
     margin: 0;
     display: flex;
     flex-direction: column;
+    background-image: url('img/blurred.jpg');
+    background-size: cover;
 }
 
 p {
+    font-family: 'Roboto Slab', serif;
     line-height: 150%;
     margin: 1em;
 }
 
 header h1 {
     text-align: center;
-    color: rgb(30, 144, 255);
-}
-
-[role="main-navigation"] a{
-    color: white;
-    text-decoration: none;
 }
 
 input:focus,
@@ -35,6 +34,15 @@ input:active,
 textarea:focus,
 textarea:active,{
     outline: 20px solid rgb(255, 165, 0);
+}
+
+section:not(#progress) {
+    background: rgba(255,255,255, 0.9);
+    padding: 2em;
+    border-radius: 10px;
+    -webkit-box-shadow: 6px 14px 50px -20px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 14px 50px -20px rgba(0,0,0,0.75);
+    box-shadow: 6px 14px 50px -20px rgba(0,0,0,0.75);
 }
 
 /* Helpers */
@@ -51,13 +59,14 @@ textarea:active,{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    background: rgb(30, 144, 255);
+    background: rgba(0, 0 ,0 ,0.5);
     color: white;
 }
 
 [role="main-navigation"] a{
     color: white;
     text-decoration: none;
+    padding: 2em;
 }
 
 [role="main-navigation"] h3,
@@ -66,21 +75,37 @@ textarea:active,{
     display: flex;
     align-items: center;
 }
-#navToggle {
-    justify-content: flex-end;
-    font-size: 150%;
-}
 
 [role="main-navigation"] ul {
-    background: rgb(100, 149, 237);
     flex-basis: 100%;
-    margin: 0;
-    text-indent: -2.5em;
 }
 
 [role="main-navigation"] ul li {
     list-style: none;
     margin: 1em;
+}
+
+[role="main-navigation"] a{
+    color: white;
+    text-decoration: none;
+}
+
+[role="main-navigation"] a {
+    transition: 0.2s ease-in-out;
+}
+
+#navToggle {
+    justify-content: flex-end;
+    font-size: 150%;
+}
+
+[role="main-navigation"] a:hover,
+[role="main-navigation"] a:focus
+{
+    transition: 0.2s ease-in-out;
+    color: white;
+    background-color: rebeccapurple;
+    padding: 2em;
 }
 
 /* Progress Section */
@@ -96,9 +121,6 @@ textarea:active,{
     align-items: center;
 }
 
-[role="progress-indicator"] h2 {
-    color: rgb(30, 144, 255);
-}
 
 [role="progress-indicator"] progress {
     width: 100%;
@@ -168,7 +190,7 @@ textarea:active,{
     color: rgb(30, 144, 255);
 }
 input {
-    font-family: inherit;
+    font-family: 'Oswald', sans-serif;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -420,33 +442,43 @@ input {
     #navToggle {
         display: none;
     }
-    [role="main-navigation"] a {
-        transition: 0.2s ease-in-out;
-    }
 
-    [role="main-navigation"] a:hover,
-    [role="main-navigation"] a:focus
-    {
-        transition: 0.2s ease-in-out;
-        color: skyblue;
+    [role="main-navigation"] ul {
+        flex-basis: 0;
     }
 
     [role="main-navigation"] ul:not(#dropdown-list) {
         display: flex;
         flex-direction: row;
-        padding: 0 4em;
+        padding: 0 2em;
     }
     [role="main-navigation"] ul li:not(#dropdown-list) {
-        margin-right: 5em;
+
     }
 
     [role="main-navigation"] #dropdown-list {
         position: absolute;
-        top: 12.55em;
-        background-color: darkslateblue;
+        padding: 0.6em;
+        top: 5.5em;
+        background-color: mediumpurple;
         -webkit-box-shadow: 6px 14px 50px -20px rgba(0,0,0,0.75);
         -moz-box-shadow: 6px 14px 50px -20px rgba(0,0,0,0.75);
         box-shadow: 6px 14px 50px -20px rgba(0,0,0,0.75);
+    }
+
+    [role="main-navigation"] #dropdown-list a:hover {
+        padding: 0.5em 2em;
+    }
+
+    #main-navigation-links li:nth-child(3) a::after {
+        position: absolute;
+        top: -6px;
+        left: 10px;
+        display: inline-block;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid mediumpurple;
+        border-left: 6px solid transparent;
+        content: '';
     }
 
     #main-content {
