@@ -1,10 +1,11 @@
-/*
-    Living Styleguide for CSS To The Rescue
+/*  Living Styleguide for CSS To The Rescue
+    By Tristan Jacobs - 2017    */
 
-    By Tristan Jacobs - 2017
- */
+/*  Created with a Mobile First approach */
+/* ====================================== */
 
-/* Created with a Mobile First approach */
+
+
 
 /* Some global styles */
 body {
@@ -74,7 +75,7 @@ textarea:active,{
     background: rgb(100, 149, 237);
     flex-basis: 100%;
     margin: 0;
-    text-indent: -2em;
+    text-indent: -2.5em;
 }
 
 [role="main-navigation"] ul li {
@@ -83,6 +84,10 @@ textarea:active,{
 }
 
 /* Progress Section */
+
+#progress {
+    width: 100%;
+}
 
 [role="progress-indicator"] {
     padding: 2em;
@@ -412,6 +417,38 @@ input {
 }
 /* Desktops and up */
 @media only screen and (min-width: 1260px) {
+    #navToggle {
+        display: none;
+    }
+    [role="main-navigation"] a {
+        transition: 0.2s ease-in-out;
+    }
+
+    [role="main-navigation"] a:hover,
+    [role="main-navigation"] a:focus
+    {
+        transition: 0.2s ease-in-out;
+        color: skyblue;
+    }
+
+    [role="main-navigation"] ul:not(#dropdown-list) {
+        display: flex;
+        flex-direction: row;
+        padding: 0 4em;
+    }
+    [role="main-navigation"] ul li:not(#dropdown-list) {
+        margin-right: 5em;
+    }
+
+    [role="main-navigation"] #dropdown-list {
+        position: absolute;
+        top: 12.55em;
+        background-color: darkslateblue;
+        -webkit-box-shadow: 6px 14px 50px -20px rgba(0,0,0,0.75);
+        -moz-box-shadow: 6px 14px 50px -20px rgba(0,0,0,0.75);
+        box-shadow: 6px 14px 50px -20px rgba(0,0,0,0.75);
+    }
+
     #main-content {
         justify-content: space-between;
         align-items: flex-start;
