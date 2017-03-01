@@ -140,7 +140,7 @@ section:not(#progress) {
     border: 1px solid rgb(211, 211, 211);
 }
 [role="progress-indicator"] progress[value]::-webkit-progress-value {
-    background-color: lightgreen;
+    background-color: #78b6ee;
     border-radius: 2px;
 }
 [role="progress-indicator"] ol {
@@ -153,16 +153,18 @@ section:not(#progress) {
     line-height: 10pt;
 }
 [role="progress-indicator"] ol li:not(:nth-child(n+3)) a {
-    color: rgb(144, 238, 144);
+    color: #78B6EE;
     font-weight: bold;
+    text-decoration: none;
 }
 [role="progress-indicator"] ol li:not(:nth-child(n+3)):before {
     content:"\2713\0020";
-    color: rgb(144, 238, 144);
+    color: #78B6EE;
 }
 [role="progress-indicator"] ol li:not(:nth-child(n+3)) {
     text-indent: -1.5em;
     list-style-type: none;
+
 }
 
 /* Login Form */
@@ -438,7 +440,7 @@ input {
     }
 }
 /* Desktops and up */
-@media only screen and (min-width: 1260px) {
+@media only screen and (min-width: 860px) {
     #navToggle {
         display: none;
     }

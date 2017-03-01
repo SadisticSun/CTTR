@@ -21,32 +21,32 @@
             <a aria-label="Home, current page" href="#main-content">Home</a>
         </li>
         <li>
-            <a href="#progress">Progress</a>
+            <a id="progressToggle" href="#progress">Progress</a>
         </li>
         <li>
-            <a href="#" id="dropdownToggle">Forms</a>
+            <a id="formsToggle" href="#" >Forms</a>
+        </li>
+        <li>
+            <a id="dropdownToggle" href="#articles">Articles</a>
             <ul class="hide" id="dropdown-list">
                 <li>
-                    <a href="/products/rock">Rock</a>
+                    <a id="mediaItemToggle" href="#">Media Item</a>
                 </li>
                 <li>
-                    <a href="/products/paper">Paper</a>
+                    <a id="titleImageToggle" href="#">Image with Title</a>
                 </li>
                 <li>
-                    <a href="/products/scissors">Scissors</a>
+                    <a id="fullImageToggle" href="#">Full Image</a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href="#articles">Articles</a>
-        </li>
-        <li>
-            <a href="#rating">Rating</a>
+            <a id="ratingToggle" href="#rating">Rating</a>
         </li>
     </ul>
 
 </nav>
-<section id="progress">
+<section class="hide" id="progress">
     <nav class="order-nav" role="progress-indicator">
         <h2>Finish your order</h2>
         <progress max="1" value="0.50">25%</progress>
