@@ -10,219 +10,265 @@
 </head>
 
 <body>
-<header>
-
-</header>
-<nav role="main-navigation">
-    <h3>Main Navigation</h3>
-    <span id="navToggle"><a href="#">&#9776;</a></span>
-    <ul id="main-navigation-links" class="hide">
-        <li>
-            <a aria-label="Home, current page" href="#main-content">Home</a>
-        </li>
-        <li>
-            <a id="progressToggle" href="#progress">Progress</a>
-        </li>
-        <li>
-            <a id="formsToggle" href="#" >Forms</a>
-        </li>
-        <li>
-            <a id="dropdownToggle" href="#articles">Articles</a>
-            <ul class="hide" id="dropdown-list">
+    <header>
+        <nav id="main-navigation">
+            <h3>Main Navigation</h3>
+            <span id="navToggle"><a>&#9776;</a></span>
+            <ul id="main-navigation-links" class="hide">
                 <li>
-                    <a id="mediaItemToggle" href="#">Media Item</a>
+                    <a href="#showAll" aria-label="Home, current page">Home</a>
                 </li>
                 <li>
-                    <a id="titleImageToggle" href="#">Image with Title</a>
+                    <a href="#progress">Progress Meter</a>
                 </li>
                 <li>
-                    <a id="fullImageToggle" href="#">Full Image</a>
+                    <a href="#checkboxes">Checkboxes</a>
+                </li>
+                <li>
+                    <a href="#spinner">Loading Spinner</a>
+                </li>
+                <li>
+                    <a href="#forms">Forms</a>
+                </li>
+                <li>
+                    <a href="#chat">Chat</a>
+                </li>
+                <li>
+                    <a href="#articles">Articles</a>
+                </li>
+                <li>
+                    <a href="#rating">Rating</a>
                 </li>
             </ul>
-        </li>
-        <li>
-            <a id="ratingToggle" href="#rating">Rating</a>
-        </li>
-    </ul>
 
-</nav>
-<section class="hide" id="progress">
-    <nav class="order-nav" role="progress-indicator">
-        <h2>Finish your order</h2>
-        <progress max="1" value="0.50">25%</progress>
-        <ol>
-            <li>
-                <a href="#">Cart</a>
-            </li>
-            <li>
-                <a aria-label="Address, current step" href="#">Address</a>
-            </li>
-            <li><span>Payment</span>
-            </li>
-            <li><span>Confirm</span>
-            </li>
-        </ol>
-    </nav>
-</section>
-<main  id="main-content">
-    <section class="hide" id="forms">
-        <form action="/" class="hasShadow" id="login-form" method="post" name="login-form">
-            <h3>Login Form</h3>
-            <label for="field-email">Email</label>
-            <input autocomplete="email" autofocus="" id="field-email" name="field-email" placeholder="john@johndoe.com" required type="email">
+        </nav>
+    </header>
 
-            <label for="field-password">Password</label>
-            <input id="field-password" name="field-password" placeholder="Hello123!" required type="password">
-            <a href="/">Forgot password?</a>
+    <main id="main-content">
+        <section id="progress">
+            <nav class="order-nav" role="progress-indicator">
+                <h2>Finish your order</h2>
+                <progress max="1" value="0.50">25%</progress>
+                <ol>
+                    <li>
+                        <a href="#">Cart</a>
+                    </li>
+                    <li>
+                        <a aria-label="Address, current step" href="#">Address</a>
+                    </li>
+                    <li><span>Payment</span>
+                    </li>
+                    <li><span>Confirm</span>
+                    </li>
+                </ol>
+            </nav>
+        </section>
 
-            <span>
+        <section id="checkboxes">
+                <h1>Checkboxes</h1>
+                <div class="checkbox-container">
+                  <input type="checkbox">
+                  <input type="checkbox" checked>
+                  <input type="checkbox" disabled>
+                </div>
+        </section>
+
+        <section id="spinner">
+          <h1>Loading Spinner</h1>
+          <div class="spinner-container">
+            <div class="spinner1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="6em" height="6em" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt">
+                <rect x="0" y="0" width="100" height="100" fill="none" class="bk"/>
+                <circle cx="50" cy="50" r="40" stroke="#ecf0f1" fill="none" stroke-width="10" stroke-linecap="round"/>
+                <circle cx="50" cy="50" r="40" stroke="#39CA74" fill="none" stroke-width="6" stroke-linecap="round">
+                  <animate attributeName="stroke-dashoffset" dur="1.5s" repeatCount="indefinite" from="0" to="502"/>
+                  <animate attributeName="stroke-dasharray" dur="1.5s" repeatCount="indefinite" values="150.6 100.4;1 250;150.6 100.4"/>
+                </circle>
+              </svg>
+            </div>
+            <div class="spinner2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="6em" height="6em" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ripple">
+                <rect x="0" y="0" width="100" height="100" fill="none" class="bk"/>
+                <g>
+                  <animate attributeName="opacity" dur="2s" repeatCount="indefinite" begin="-1s" keyTimes="0;0.33;1" values="1;1;0"/>
+                  <circle cx="50" cy="50" r="7.33412" stroke="#8C929D" fill="none" stroke-width="4" stroke-linecap="round">
+                    <animate attributeName="r" dur="2s" repeatCount="indefinite" begin="-1s" keyTimes="0;0.33;1" values="0;22;44"/>
+                  </circle>
+                </g>
+                <g>
+                  <animate attributeName="opacity" dur="2s" repeatCount="indefinite" begin="0s" keyTimes="0;0.33;1" values="1;1;0"/>
+                  <circle cx="50" cy="50" r="31.1944" stroke="#39CA74" fill="none" stroke-width="4" stroke-linecap="round">
+                    <animate attributeName="r" dur="2s" repeatCount="indefinite" begin="0s" keyTimes="0;0.33;1" values="0;22;44"/>
+                  </circle>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <section id="forms">
+            <form id="login-form" method="post" name="login-form">
+                <h3>Login Form</h3>
+                <label for="field-email">Email</label>
+                <input autocomplete="email" autofocus="" id="field-email" name="field-email" placeholder="john@johndoe.com" required type="email">
+
+                <label for="field-password">Password</label>
+                <input id="field-password" name="field-password" placeholder="Hello123!" required type="password">
+                <a href="/">Forgot password?</a>
+
+                <span>
                 <input id="field-stay-logged-in" name="field-stay-logged-in" type="checkbox" value="stay-logged-in">
                 <label for="field-stay-logged-in">Stay logged in</label>
             </span>
-            <button type="submit">Login</button>
-        </form>
-
-        <div class="chat">
-            <h3>Chat</h3>
-            <ol>
-                <li>
-                    <p class="message">Hey!</p>
-                    <footer>
-                        <p>Posted on
-                            <time datatime="2015-01-22T10:25">10:25 AM</time> by you</p>
-                        <p data-status="READ">Has been read</p>
-                    </footer>
-                </li>
-                <li>
-                    <p class="message">Hey! Sorry I was busy</p>
-                    <footer>
-                        <p>Posted on
-                            <time datatime="2017-02-03T14:19">2:19 PM</time> by John</p>
-                    </footer>
-                </li>
-                <li>
-                    <p class="message">I sent that 2 years ago</p>
-                    <footer>
-                        <p>Posted on
-                            <time datatime="2017-02-03T14:22">2:22 PM</time> by you</p>
-                        <p data-status="DELIVERED">Has been delivered</p>
-                    </footer>
-                </li>
-            </ol>
-            <form action="/" method="post">
-                <label for="field-message">Message</label>
-                <textarea id="field-message" name="field-message"></textarea>
-                <button type="submit">Send</button>
+                <button type="submit">Login</button>
             </form>
-        </div>
-    </section>
+        </section>
 
-    <section class="hide" id="articles">
-        <article class="default-article">
-            <h3>Article</h3>
-            <img alt="A colorful crayon drawing on the hood of a car." class="article-img" src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg">
-            <h2><a href="/">HTML5 accessibility, are block links hurting accessibility?</a></h2>
-            <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs,
-                this was forbidden in previous versions of HTML. A recent article by <span class="tagged">@feather</span> concludes
-                that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-        </article>
-        <article class="default-article">
-            <h3>Article</h3>
-            <img alt="A colorful crayon drawing on the hood of a car." class="article-img" src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg">
-            <h2><a href="/">HTML5 accessibility, are block links hurting accessibility?</a></h2>
-            <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs,
-                this was forbidden in previous versions of HTML. A recent article by <span class="tagged">@feather</span> concludes
-                that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-        </article>
-        <article class="default-article">
-            <h3>Article</h3>
-            <img alt="A colorful crayon drawing on the hood of a car." class="article-img" src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg">
-            <h2><a href="/">HTML5 accessibility, are block links hurting accessibility?</a></h2>
-            <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs,
-                this was forbidden in previous versions of HTML. A recent article by <span class="tagged">@feather</span> concludes
-                that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-        </article>
+        <section id="chat">
+          <div id="chat-box">
+              <h3>Chat</h3>
+              <ol>
+                  <li>
+                      <p class="message">Hey!</p>
+                      <footer>
+                          <p>Posted on
+                              <time datatime="2015-01-22T10:25">10:25 AM</time> by you</p>
+                          <p data-status="READ">Has been read</p>
+                      </footer>
+                  </li>
+                  <li>
+                      <p class="message">Hey! Sorry I was busy</p>
+                      <footer>
+                          <p>Posted on
+                              <time datatime="2017-02-03T14:19">2:19 PM</time> by John</p>
+                      </footer>
+                  </li>
+                  <li>
+                      <p class="message">I sent that 2 years ago</p>
+                      <footer>
+                          <p>Posted on
+                              <time datatime="2017-02-03T14:22">2:22 PM</time> by you</p>
+                          <p data-status="DELIVERED">Has been delivered</p>
+                      </footer>
+                  </li>
+              </ol>
+              <form action="/" method="post">
+                  <label for="field-message">Message</label>
+                  <textarea id="field-message" name="field-message"></textarea>
+                  <button type="submit">Send</button>
+              </form>
+            </div>
+        </section>
 
-        <article class="img-w-title">
-            <h3>Picture with title</h3>
-            <h1>This picture has a title</h1>
-            <figure>
-                <!-- Portrait -->
-                <img alt="A drawing of a colorful monster on a newspaper" src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg">
-                <!-- Landscape -->
-                <!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
-            </figure>
-            <figcaption>
-                <p>There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.</p>
-                <footer>
-                    <p><time datetime="2017-02-06">6-2-2017</time> © 2017</p>
-                    <a href="https://vasilis.nl">Vasilis van Gemert</a>
-                </footer>
-            </figcaption>
-        </article>
-    </section>
+        <section id="articles">
+            <article class="default-article">
+                <img alt="A colorful crayon drawing on the hood of a car." class="article-img" src="https://tctechcrunch2011.files.wordpress.com/2015/04/codecode.jpg?w=738">
+                <h2><a href="/">HTML5 accessibility, are block links hurting accessibility?</a></h2>
+                <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by <span class="tagged">@feather</span> concludes that the inclusion
+                    of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+            </article>
+            <article class="default-article pulled-left">
+                <img alt="A colorful crayon drawing on the hood of a car." class="article-img" src="https://tctechcrunch2011.files.wordpress.com/2015/04/codecode.jpg?w=738">
+                <div class="art-container">
+                  <h2><a href="/">HTML5 accessibility, are block links hurting accessibility?</a></h2>
+                  <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by <span class="tagged">@feather</span> concludes that the inclusion
+                      of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+                </div>
+            </article>
+            <article class="default-article pulled-right">
+                <img alt="A colorful crayon drawing on the hood of a car." class="article-img" src="https://tctechcrunch2011.files.wordpress.com/2015/04/codecode.jpg?w=738">
+                <div class="art-container">
+                  <h2><a href="/">HTML5 accessibility, are block links hurting accessibility?</a></h2>
+                  <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by <span class="tagged">@feather</span> concludes that the inclusion
+                      of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+                </div>
+            </article>
 
-    <!--<section id="rating" class="hide">-->
-        <!--&lt;!&ndash;<h3>Rating</h3>&ndash;&gt;-->
-        <!--&lt;!&ndash;<fieldset>&ndash;&gt;-->
-            <!--&lt;!&ndash;<legend>Rating</legend>&ndash;&gt;-->
-            <!--&lt;!&ndash;<label>&ndash;&gt;-->
-                <!--&lt;!&ndash;<input id="rating-0" name="rating" type="radio"> Sad!&ndash;&gt;-->
-                <!--&lt;!&ndash;<svg enable-background="new 0 0 64 64" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<circle cx="32" cy="32" fill="#ef5350" r="30"></circle>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<path d="m41 49.7c-5.8-4.8-12.2-4.8-18 0-.7.6-1.3-.4-.8-1.3 1.8-3.4 5.3-6.5 9.8-6.5s8.1 3.1 9.8 6.5c.5.8-.1 1.8-.8 1.3" fill="#302424"></path>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<path d="m10.2 24.9c-1.5 4.7.6 10 5.3 12.1 4.6 2.2 10 .5 12.7-3.7l-6.9-7.7-11.1-.7" fill="#fff"></path>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<g fill="#302424">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<path d="m14.2 25.8c-1.4 2.9-.1 6.4 2.8 7.7 2.9 1.4 6.4.1 7.7-2.8 1-1.9-9.6-6.8-10.5-4.9"></path>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<path d="m10.2 24.9c1.6-1 3.5-1.5 5.4-1.5 1.9 0 3.8.5 5.6 1.3 1.7.8 3.3 2 4.6 3.4 1.2 1.5 2.2 3.2 2.4 5.1-1.3-1.3-2.6-2.4-4-3.4-1.4-1-2.8-1.8-4.2-2.4-1.5-.7-3-1.2-4.6-1.7-1.8-.3-3.4-.6-5.2-.8"></path>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</g>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<path d="m53.8 24.9c1.5 4.7-.6 10-5.3 12.1-4.6 2.2-10 .5-12.7-3.7l6.9-7.7 11.1-.7" fill="#fff"></path>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<g fill="#302424">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<path d="m49.8 25.8c1.4 2.9.1 6.4-2.8 7.7-2.9 1.4-6.4.1-7.7-2.8-1-1.9 9.6-6.8 10.5-4.9"></path>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<path d="m53.8 24.9c-1.6-1-3.5-1.5-5.4-1.5-1.9 0-3.8.5-5.6 1.3-1.7.8-3.3 2-4.6 3.4-1.2 1.5-2.2 3.2-2.4 5.1 1.3-1.3 2.6-2.4 4-3.4 1.4-1 2.8-1.8 4.2-2.4 1.5-.7 3-1.2 4.6-1.7 1.8-.3 3.4-.6 5.2-.8"></path>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</g>&ndash;&gt;-->
-                <!--&lt;!&ndash;</svg>&ndash;&gt;-->
-            <!--&lt;!&ndash;</label>&ndash;&gt;-->
-            <!--&lt;!&ndash;<label>&ndash;&gt;-->
-                <!--&lt;!&ndash;<input id="rating-1" name="rating" type="radio"> Meh&ndash;&gt;-->
-                <!--&lt;!&ndash;<svg enable-background="new 0 0 64 64" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<path d="m2.5 37.2c2.9 16.3 18.4 27.2 34.8 24.3 16.3-2.9 27.2-18.4 24.3-34.8-2.9-16.2-18.5-27.1-34.8-24.2-16.3 2.8-27.2 18.4-24.3 34.7" fill="#ffdd67"></path>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<g fill="#664e27">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<circle cx="42.4" cy="24.7" r="5"></circle>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<circle cx="19.7" cy="28.7" r="5"></circle>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<path d="m43.3 41.8c-5.8-1.5-12-.4-16.9 3-1.2.9 1.1 4 2.3 3.2 3.2-2.3 8.4-3.8 13.7-2.4 1.3.3 2.4-3.3.9-3.8"></path>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</g>&ndash;&gt;-->
-                <!--&lt;!&ndash;</svg>&ndash;&gt;-->
-            <!--&lt;!&ndash;</label>&ndash;&gt;-->
-            <!--&lt;!&ndash;<label>&ndash;&gt;-->
-                <!--&lt;!&ndash;<input id="rating-2" name="rating" type="radio"> Nice&ndash;&gt;-->
-                <!--&lt;!&ndash;<svg enable-background="new 0 0 64 64" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<circle cx="32" cy="32" fill="#ffdd67" r="30"></circle>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<g fill="#664e27">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<circle cx="20.5" cy="26.6" r="5"></circle>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<circle cx="43.5" cy="26.6" r="5"></circle>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<path d="m44.6 40.3c-8.1 5.7-17.1 5.6-25.2 0-1-.7-1.8.5-1.2 1.6 2.5 4 7.4 7.7 13.8 7.7s11.3-3.6 13.8-7.7c.6-1.1-.2-2.3-1.2-1.6"></path>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</g>&ndash;&gt;-->
-                <!--&lt;!&ndash;</svg>&ndash;&gt;-->
-            <!--&lt;!&ndash;</label>&ndash;&gt;-->
-            <!--&lt;!&ndash;<label>&ndash;&gt;-->
-                <!--&lt;!&ndash;<input id="rating-3" name="rating" type="radio"> Fantastic!&ndash;&gt;-->
-                <!--&lt;!&ndash;<svg enable-background="new 0 0 64 64" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<circle cx="32" cy="32" fill="#ffdd67" r="30"></circle>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<path d="m49.7 34.4c-.4-.5-1.1-.4-1.9-.4-15.8 0-15.8 0-31.6 0-.8 0-1.5-.1-1.9.4-3.9 5 .7 19.6 17.7 19.6 17 0 21.6-14.6 17.7-19.6" fill="#664e27"></path>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<path d="m33.8 41.7c-.6 0-1.5.5-1.1 2 .2.7 1.2 1.6 1.2 2.8 0 2.4-3.8 2.4-3.8 0 0-1.2 1-2 1.2-2.8.3-1.4-.6-2-1.1-2-1.6 0-4.1 1.7-4.1 4.6 0 3.2 2.7 5.8 6 5.8 3.3 0 6-2.6 6-5.8-.1-2.8-2.7-4.5-4.3-4.6" fill="#4c3526"></path>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<path d="m24.3 50.7c2.2 1 4.8 1.5 7.7 1.5 2.9 0 5.5-.6 7.7-1.5-2.1-1.1-4.7-1.7-7.7-1.7s-5.6.6-7.7 1.7" fill="#ff717f"></path>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<path d="m47 36c-15 0-15 0-29.9 0-2.1 0-2.1 4-.1 4 10.4 0 19.6 0 30 0 2 0 2-4 0-4" fill="#fff"></path>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<g fill="#664e27">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<circle cx="20.5" cy="23" r="5"></circle>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<circle cx="43.5" cy="23" r="5"></circle>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</g>&ndash;&gt;-->
-                <!--&lt;!&ndash;</svg>&ndash;&gt;-->
-            <!--&lt;!&ndash;</label>&ndash;&gt;-->
-        <!--&lt;!&ndash;</fieldset>&ndash;&gt;-->
-    <!--</section>-->
+
+            <article id="img-w-title">
+                <h3>Picture with title</h3>
+
+                <figure>
+                    <h1>This picture has a title</h1>
+                    <!-- Portrait -->
+                    <img alt="A drawing of a colorful monster on a newspaper" src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg">
+                    <!-- Landscape -->
+                    <img class="hide" src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" />
+                    <figcaption>
+                        <p>There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.</p>
+                        <footer>
+                            <p><time datetime="2017-02-06">6-2-2017</time> © 2017</p>
+                            <a href="https://vasilis.nl">Vasilis van Gemert</a>
+                        </footer>
+                    </figcaption>
+                </figure>
+
+            </article>
+        </section>
+
+        <section id="rating">
+          <h1>Rating</h1>
+          <fieldset>
+            <legend>Rating</legend>
+            <div role="fieldset">
+              <input id="rating-0" type="radio" name="rating">
+              <label for="rating-0">Sad!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <circle cx="32" cy="32" r="30" fill="#ef5350"></circle>
+                  <path d="m41 49.7c-5.8-4.8-12.2-4.8-18 0-.7.6-1.3-.4-.8-1.3 1.8-3.4 5.3-6.5 9.8-6.5s8.1 3.1 9.8 6.5c.5.8-.1 1.8-.8 1.3" fill="#302424"></path>
+                  <path d="m10.2 24.9c-1.5 4.7.6 10 5.3 12.1 4.6 2.2 10 .5 12.7-3.7l-6.9-7.7-11.1-.7" fill="#fff"></path>
+                  <g fill="#302424">
+                    <path d="m14.2 25.8c-1.4 2.9-.1 6.4 2.8 7.7 2.9 1.4 6.4.1 7.7-2.8 1-1.9-9.6-6.8-10.5-4.9"></path>
+                    <path d="m10.2 24.9c1.6-1 3.5-1.5 5.4-1.5 1.9 0 3.8.5 5.6 1.3 1.7.8 3.3 2 4.6 3.4 1.2 1.5 2.2 3.2 2.4 5.1-1.3-1.3-2.6-2.4-4-3.4-1.4-1-2.8-1.8-4.2-2.4-1.5-.7-3-1.2-4.6-1.7-1.8-.3-3.4-.6-5.2-.8"></path>
+                  </g>
+                  <path d="m53.8 24.9c1.5 4.7-.6 10-5.3 12.1-4.6 2.2-10 .5-12.7-3.7l6.9-7.7 11.1-.7" fill="#fff"></path>
+                  <g fill="#302424">
+                    <path d="m49.8 25.8c1.4 2.9.1 6.4-2.8 7.7-2.9 1.4-6.4.1-7.7-2.8-1-1.9 9.6-6.8 10.5-4.9"></path>
+                    <path d="m53.8 24.9c-1.6-1-3.5-1.5-5.4-1.5-1.9 0-3.8.5-5.6 1.3-1.7.8-3.3 2-4.6 3.4-1.2 1.5-2.2 3.2-2.4 5.1 1.3-1.3 2.6-2.4 4-3.4 1.4-1 2.8-1.8 4.2-2.4 1.5-.7 3-1.2 4.6-1.7 1.8-.3 3.4-.6 5.2-.8"></path>
+                  </g>
+                </svg>
+              </label>
+              <input id="rating-1" type="radio" name="rating">
+              <label for="rating-1">Meh
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <path d="m2.5 37.2c2.9 16.3 18.4 27.2 34.8 24.3 16.3-2.9 27.2-18.4 24.3-34.8-2.9-16.2-18.5-27.1-34.8-24.2-16.3 2.8-27.2 18.4-24.3 34.7" fill="#ffdd67"></path>
+                  <g fill="#664e27">
+                    <circle cx="42.4" cy="24.7" r="5"></circle>
+                    <circle cx="19.7" cy="28.7" r="5"></circle>
+                    <path d="m43.3 41.8c-5.8-1.5-12-.4-16.9 3-1.2.9 1.1 4 2.3 3.2 3.2-2.3 8.4-3.8 13.7-2.4 1.3.3 2.4-3.3.9-3.8"></path>
+                  </g>
+                </svg>
+              </label>
+              <input id="rating-2" type="radio" name="rating">
+              <label for="rating-2">Nice
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <circle cx="32" cy="32" r="30" fill="#ffdd67"></circle>
+                  <g fill="#664e27">
+                    <circle cx="20.5" cy="26.6" r="5"></circle>
+                    <circle cx="43.5" cy="26.6" r="5"></circle>
+                    <path d="m44.6 40.3c-8.1 5.7-17.1 5.6-25.2 0-1-.7-1.8.5-1.2 1.6 2.5 4 7.4 7.7 13.8 7.7s11.3-3.6 13.8-7.7c.6-1.1-.2-2.3-1.2-1.6"></path>
+                  </g>
+                </svg>
+              </label>
+              <input id="rating-3" type="radio" name="rating">
+              <label for="rating-3">Fantastic!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <circle cx="32" cy="32" r="30" fill="#ffdd67"></circle>
+                  <path d="m49.7 34.4c-.4-.5-1.1-.4-1.9-.4-15.8 0-15.8 0-31.6 0-.8 0-1.5-.1-1.9.4-3.9 5 .7 19.6 17.7 19.6 17 0 21.6-14.6 17.7-19.6" fill="#664e27"></path>
+                  <path d="m33.8 41.7c-.6 0-1.5.5-1.1 2 .2.7 1.2 1.6 1.2 2.8 0 2.4-3.8 2.4-3.8 0 0-1.2 1-2 1.2-2.8.3-1.4-.6-2-1.1-2-1.6 0-4.1 1.7-4.1 4.6 0 3.2 2.7 5.8 6 5.8 3.3 0 6-2.6 6-5.8-.1-2.8-2.7-4.5-4.3-4.6" fill="#4c3526"></path>
+                  <path d="m24.3 50.7c2.2 1 4.8 1.5 7.7 1.5 2.9 0 5.5-.6 7.7-1.5-2.1-1.1-4.7-1.7-7.7-1.7s-5.6.6-7.7 1.7" fill="#ff717f"></path>
+                  <path d="m47 36c-15 0-15 0-29.9 0-2.1 0-2.1 4-.1 4 10.4 0 19.6 0 30 0 2 0 2-4 0-4" fill="#fff"></path>
+                  <g fill="#664e27">
+                    <circle cx="20.5" cy="23" r="5"></circle>
+                    <circle cx="43.5" cy="23" r="5"></circle>
+                  </g>
+                </svg>
+              </label>
+            </div>
+          </fieldset>
+        </section>
+
     </main>
-    <script src="routie.js"></script>
     <script src="script.js"></script>
 </body>
 

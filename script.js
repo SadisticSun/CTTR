@@ -1,52 +1,47 @@
-(function() {
+// Met wat hulp van de lieftallige Dave Bitter
 
-    function $(id) {
-        return document.querySelector(id);
-    }
-    function $$(classNames) {
-        return document.querySelectorAll(classNames);
-    }
-
-
-    var DOMelements = {
-        _toggleNav          : $('#navToggle')
-        _navLink            : $$('main-navigation-links a'),
-        _toggleDropdown     : $('#dropdownToggle'),
-        _navList            : $('#main-navigation-links'),
-        _dropdown           : $('#dropdown-list'),
-        _progress           : $('#progress'),
-        _forms              : $('#forms'),
-        _articles           : $('#articles'),
-        _rating             : $('#rating'),
-        _sections           : $$('section')
+(function () {
+    "use strict";
+    var app = {
+        init: function (routes, sections, window) {
+            routes.init(sections, window);
+        }
     };
+    var routes = {
+        init: function (sections, window) {
+            window.onhashchange = function () {
+                sections.toggle();
+            };
 
-    var toggleElements = {
-        progressToggle      : $('#progressToggle'),
-        formsToggle         : $('#formsToggle'),
-        mediaItemToggle     : $('#mediaItemToggle'),
-        titleImageToggle    : $('#titleImageToggle'),
-        fullImageToggle     : $('#fullImageToggle')
-        ratingToggle        : $('#ratingToggle')
+            document.getElementById("navToggle").addEventListener("click", function () {
+                document.getElementById("main-navigation-links").classList.toggle("hide");
+            });
+        }
     };
+    var sections = {
+        toggle: function () {
 
-    function toggleHandler(toggle, el) {
-        toggle.addEventListener("click", function() {
-            el.classList.toggle('hide');
-        })
+            var sectionList = document.querySelectorAll("section");
+
+            sectionList.forEach(function (section) {
+                if (location.hash === "#showAll") {
+                    section.classList.remove("hide");
+                    document.getElementById("main-navigation-links").classList.add("hide");
+                    document.querySelector("a[href='#showAll']").classList.add("active");
+                    document.querySelector("a[href='#" + section.id + "']").classList.remove("active");
+                } else if (location.hash === "#" + section.id) {
+                    section.classList.remove("hide");
+                    document.getElementById("main-navigation-links").classList.add("hide");
+                    document.querySelector("a[href='#" + section.id + "']").classList.add("active");
+                } else {
+                    section.classList.add("hide");
+                    document.getElementById("main-navigation-links").classList.add("hide");
+                    document.querySelector("a[href='#" + section.id + "']").classList.remove("active");
+                    document.querySelector("a[href='#showAll']").classList.remove("active");
+                }
+
+            });
+        }
     };
-
-
-
-
-    toggleHandler(DOMelements._toggleNav, DOMelements._navList);
-    toggleHandler(DOMelements._toggleDropdown, DOMelements._dropdown);
-
-    toggleHandler(toggleElements.progressToggle, DOMelements._progress);
-    toggleHandler(toggleElements.formsToggle, DOMelements._forms);
-    toggleHandler(toggleElements.ratingToggle, DOMelements._rating);
-    toggleHandler(toggleElements.mediaItemToggle, DOMelements._mediaItem);
-    toggleHandler(toggleElements.titleImageToggle, DOMelements._titleImage);
-    toggleHandler(toggleElements.fullImageToggle, DOMelements._fullImage);
-
-})();
+    app.init(routes, sections, window);
+}());
