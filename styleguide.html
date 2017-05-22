@@ -37,6 +37,9 @@
                     <a href="#articles">Articles</a>
                 </li>
                 <li>
+                    <a href="#img-title">Image With Title</a>
+                </li>
+                <li>
                     <a href="#rating">Rating</a>
                 </li>
             </ul>
@@ -51,7 +54,7 @@
                 <progress max="1" value="0.50">25%</progress>
                 <ol>
                     <li>
-                        <a href="#">Cart</a>
+                        <a>Cart</a>
                     </li>
                     <li>
                         <a aria-label="Address, current step" href="#">Address</a>
@@ -160,50 +163,28 @@
             </div>
         </section>
 
-        <section id="articles">
-            <article class="default-article">
-                <img alt="A colorful crayon drawing on the hood of a car." class="article-img" src="https://tctechcrunch2011.files.wordpress.com/2015/04/codecode.jpg?w=738">
-                <h2><a href="/">HTML5 accessibility, are block links hurting accessibility?</a></h2>
-                <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by <span class="tagged">@feather</span> concludes that the inclusion
-                    of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-            </article>
-            <article class="default-article pulled-left">
-                <img alt="A colorful crayon drawing on the hood of a car." class="article-img" src="https://tctechcrunch2011.files.wordpress.com/2015/04/codecode.jpg?w=738">
-                <div class="art-container">
-                  <h2><a href="/">HTML5 accessibility, are block links hurting accessibility?</a></h2>
-                  <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by <span class="tagged">@feather</span> concludes that the inclusion
-                      of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-                </div>
-            </article>
-            <article class="default-article pulled-right">
-                <img alt="A colorful crayon drawing on the hood of a car." class="article-img" src="https://tctechcrunch2011.files.wordpress.com/2015/04/codecode.jpg?w=738">
-                <div class="art-container">
-                  <h2><a href="/">HTML5 accessibility, are block links hurting accessibility?</a></h2>
-                  <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by <span class="tagged">@feather</span> concludes that the inclusion
-                      of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-                </div>
-            </article>
+        <section id="img-title">
 
+          <article id="img-w-title">
+              <h3>Picture with title</h3>
 
-            <article id="img-w-title">
-                <h3>Picture with title</h3>
+              <figure>
+                  <h1>This picture has a title</h1>
+                  <!-- Portrait -->
+                  <img alt="A drawing of a colorful monster on a newspaper" src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg">
+                  <!-- Landscape -->
+                  <img class="hide" src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" />
+                  <figcaption>
+                      <p>There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.</p>
+                      <footer>
+                          <p><time datetime="2017-02-06">6-2-2017</time> © 2017</p>
+                          <a href="https://vasilis.nl">Vasilis van Gemert</a>
+                      </footer>
+                  </figcaption>
+              </figure>
 
-                <figure>
-                    <h1>This picture has a title</h1>
-                    <!-- Portrait -->
-                    <img alt="A drawing of a colorful monster on a newspaper" src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg">
-                    <!-- Landscape -->
-                    <img class="hide" src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" />
-                    <figcaption>
-                        <p>There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.</p>
-                        <footer>
-                            <p><time datetime="2017-02-06">6-2-2017</time> © 2017</p>
-                            <a href="https://vasilis.nl">Vasilis van Gemert</a>
-                        </footer>
-                    </figcaption>
-                </figure>
+          </article>
 
-            </article>
         </section>
 
         <section id="rating">
@@ -267,6 +248,37 @@
             </div>
           </fieldset>
         </section>
+
+        <section id="articles">
+
+            <article class="default-article normal">
+                <img alt="A colorful crayon drawing on the hood of a car." class="article-img" src="https://tctechcrunch2011.files.wordpress.com/2015/04/codecode.jpg?w=738">
+                <h2><a href="/">HTML5 accessibility, are block links hurting accessibility?</a></h2>
+                <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by <span class="tagged">@feather</span> concludes that the inclusion
+                    of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+            </article>
+
+            <article class="default-article pulled-left">
+                <img alt="A colorful crayon drawing on the hood of a car." class="article-img" src="https://tctechcrunch2011.files.wordpress.com/2015/04/codecode.jpg?w=738">
+                <div class="art-container">
+                  <h2><a href="/">HTML5 accessibility, are block links hurting accessibility?</a></h2>
+                  <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by <span class="tagged">@feather</span> concludes that the inclusion
+                      of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+                </div>
+            </article>
+
+            <article class="default-article pulled-right">
+                <img alt="A colorful crayon drawing on the hood of a car." class="article-img" src="https://tctechcrunch2011.files.wordpress.com/2015/04/codecode.jpg?w=738">
+                <div class="art-container">
+                  <h2><a href="/">HTML5 accessibility, are block links hurting accessibility?</a></h2>
+                  <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by <span class="tagged">@feather</span> concludes that the inclusion
+                      of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+                </div>
+            </article>
+
+        </section>
+
+
 
     </main>
     <script src="script.js"></script>

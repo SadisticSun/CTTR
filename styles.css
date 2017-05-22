@@ -323,13 +323,19 @@ section, #login-form, #chat-box {
 }
 
 #articles .default-article a:after {
-  border: 1px solid;
   content: '';
   position: absolute;
-  top: -10.5em;
-  bottom: -0.5em;
-  left: -1em;
-  right: -8em;
+  top: 0;
+  left: 0;
+  bottom: -5em;
+  right: -18em;
+}
+
+#articles .normal a::after {
+  bottom: -5em;
+  right: -18em;
+  top: 0;
+  left: 0;
 }
 
 #articles .tagged {
@@ -459,17 +465,12 @@ section, #login-form, #chat-box {
 
 /* IPAD PORTRAIT */
 @media only screen
-and (min-device-width : 48em)
-and (max-device-width : 65em)
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
 and (orientation: portrait)  {
 
   #chat-box ol li:nth-of-type(even) {
     margin-left: 5.6em;
-  }
-
-  #articles .default-article a:after {
-    top: -21.5em;
-    right: -3.5em;
   }
 
   #articles .pulled-left {
@@ -477,18 +478,10 @@ and (orientation: portrait)  {
     align-items: center;
   }
 
-  #articles .pulled-left a::after {
-    top: -1em;
-    bottom: -7em;
-    left: -10em;
-    right: -10em;
-  }
-
+  #articles .default-article a:after,
+  #articles .pulled-left a::after,
   #articles .pulled-right a::after {
-    top: -1em;
-    bottom: -7em;
-    left: -1em;
-    right: -19em;
+    content: none;
   }
 
   #articles .pulled-right {
@@ -512,9 +505,9 @@ and (orientation: portrait)  {
 
 /* IPAD LANDSCAPE */
 @media only screen
-and (min-device-width : 48em)
-and (max-device-width : 65em)
-and (orientation : landscape) {
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)  {
 
   #login-form button {
     width: 10em;
@@ -530,29 +523,9 @@ and (orientation : landscape) {
     padding: 2em;
   }
 
-  #articles .default-article a:after {
-    top: -0.5em;
-    right: -14.5em;
-    bottom: -4em;
-  }
-
   #articles .pulled-left {
     display: flex;
     align-items: center;
-  }
-
-  #articles .pulled-left a::after {
-    top: -1em;
-    bottom: -6em;
-    left: -14em;
-    right: -22em;
-  }
-
-  #articles .pulled-right a::after {
-    top: -1em;
-    bottom: -6em;
-    left: -2em;
-    right: -34em;
   }
 
   #articles .pulled-right {
@@ -572,5 +545,55 @@ and (orientation : landscape) {
   #articles .pulled-right h3 {
     width: 100%;
   }
+
+}
+
+/* DESKTOP and up */
+@media (min-width: 60em)  {
+
+    #main-content {
+      margin-top: 2em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    #progress {
+      flex-basis: 100%;
+    }
+    #checkboxes,
+    #spinner,
+    #forms,
+    #chat,
+    #img-title,
+    #rating {
+      flex-basis: 25%;
+    }
+
+    #articles {
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 4em;
+    }
+    #articles article {
+      flex-basis: 27%;
+    }
+    #articles article div {
+      padding: 0;
+    }
+
+    #articles .default-article a:after {
+      content: none;
+    }
+
+    #login-form button {
+      width: 10em;
+      margin: 0 auto;
+    }
+
+
+
+
 
 }
